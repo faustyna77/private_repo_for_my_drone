@@ -51,6 +51,7 @@ void loop()
 
 
 
+
 #include <Arduino.h>
 #include <SPI.h>
 #include <nRF24L01.h>
@@ -64,7 +65,7 @@ Servo esc9;
 Servo esc10;
 
 const byte rxAddr[6] = "00001";
-const unsigned long responseTime = 10;
+const unsigned long responseTime = 5;
 int currentLed1Value = 1000; // Początkowe wartości silników
 int currentLed2Value = 1000;
 int currentLed3Value = 1000;
@@ -161,3 +162,5 @@ float lerp(float start, float end, float progress)
 {
   return start + (end - start) * progress;
 }
+
+
